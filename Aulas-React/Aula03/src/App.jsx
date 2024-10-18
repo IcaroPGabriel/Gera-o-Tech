@@ -5,6 +5,7 @@ import './App.css'
 import onePiece from './imagens/luffy.jpg'
 import goku from '../imagensPrincipais/gokuoldschool.webp'
 import Comp1 from './componentes/Comp1'
+import Imagens from './componentes/Imagens'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -21,6 +22,7 @@ function App() {
       </section>
 
       <Comp1/>
+      
 
       <h1></h1>
       

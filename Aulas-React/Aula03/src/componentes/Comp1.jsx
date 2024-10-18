@@ -9,15 +9,6 @@ function Comp1() {
     
     let [imgAt2, setImgAt2] = useState (img2[0])
 
-    let[tamanho, setTamanho] = useState(250)
-
-    function aumentar() {
-        setTamanho(tamanho + 100)
-    }
-
-    function diminuir() {
-        setTamanho(tamanho - 100)
-    }
 
     function trocarImagem() {
         if (imgAt2 == img2[0]) {
@@ -47,10 +38,6 @@ function Comp1() {
 
         <br /><br /><br /><br /><br /><br /><br /><br />
 
-
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmIJRE8ZgJTBL9iek6xpivcPsEmCAOG-7Xtg&s" width={`${tam}px`} /><br /><br />
-        <button onClick={aumentar}>Aumentar</button>
-        <button onClick={diminuir}>Diminuir</button>
 
         </>
      );
