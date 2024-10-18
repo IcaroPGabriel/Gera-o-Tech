@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 22</title>
+</head>
+<body>
+        <form action="">
+            <input type="email" name="" id="email" placeholder="Digite seu e-mail" >
+            <br>
+            <input type="password" name="senha" id="senha" placeholder="Digite sua senha" >
+            <br>
+            <button onclick="validarCampos()">Enviar</button>
+        </form>
+
+
+
+    
+</body>
+<script>
+    function validarCampos() {
+       let email = document.getElementById('email')
+       let senha = document.getElementById('senha')
+       if (email.value == '' || senha.value == '') {
+        alert("Favor preencher todos os campos")
+       } else {
+        alert("campos preenchidos")
+       }
+       
+       
+       
+    }
+</script>
+</html>

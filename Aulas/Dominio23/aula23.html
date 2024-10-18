@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 24</title>
+</head>
+<body>
+    <article id="caixa">
+        <p>Texto</p>
+    </article>
+    <h1>Manupulação de Estrutura dos elementos</h1>
+    <article onclick="adicionandoImagem()" id="lista" style="border: 3px solid black; width: 200px; height: 400px;">
+        <img id="imgSonic" width="200px" src="https://institutodecinema.com.br/img/sonic.png" alt="">
+        <img id="imgZero" width="200px" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/84f6d3c7-19b3-471c-99b3-ebe943ca814d/dhhvcxm-200b6665-2726-462c-b6f5-ad24a61d5529.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzg0ZjZkM2M3LTE5YjMtNDcxYy05OWIzLWViZTk0M2NhODE0ZFwvZGhodmN4bS0yMDBiNjY2NS0yNzI2LTQ2MmMtYjZmNS1hZDI0YTYxZDU1MjkucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.B__bMucSdtrO8aUxEYE8FARHWpIe-isux_8HoUpAc4Y" alt="">
+    </article>
+    
+</body>
+<script>
+    let caixa = document.getElementById('caixa')
+    console.log(caixa);
+    caixa.style.backgroundColor = 'blue'
+    caixa.style.color = 'white'
+    caixa.style.fontSize = '30pt'
+    caixa.style.fontFamily = 'times new roman'
+    caixa.style.display = 'none'
+    caixa.style.display = 'block'
+
+    function adicionandoImagem() {
+        let lista = document.getElementById('lista')
+        let paragrafo = document.createElement('p')
+        paragrafo.innerHTML = 'Rascunho'
+        let imagem = document.createElement('img')
+        imagem.setAttribute('src','https://sm.ign.com/ign_br/screenshot/default/link_t3cf.png', 'width')
+
+        // ADICIONA UM ELEMENTO NO FINAL DO ELEMENTO PAI
+        // lista.appendChild(paragrafo)
+        lista.appendChild(imagem)
+        // Adiciona um elemento no inicio do elemento pai
+        // lista.insertBefore(paragrafo, lista.firstChild)
+
+        // lista.insertBefore(paragrafo,document.getElementById )
+
+        // Remover um elemento
+        // lista.removeChild(img)
+
+        // substituir um elemento
+        // lista.replaceChild()
+    }
+
+    // OBJETOS
+
+
+    let carro = [{
+        portas:2,
+        cor:'preto',
+        modelo:'UNO mille',
+        imagem:'https://vintageclassicos.com.br/wp-content/uploads/2023/08/uno-mille2.jpg',
+        acelerar: function() {
+            alert('acelerando')
+        },
+        frear: function() {
+            alert('freando')
+        }
+        
+    },{
+        portas:4,
+        cor: 'preto',
+        modelo: 'celta',
+        imagem:'https://cdn.grupolance.com.br/batches/5e/17222/4e487c60b3d30c301e59e3581fd8d977.jpg',
+        acelerar: function() {
+            alert('acelerando')
+        },
+        frear: function() {
+            alert('freando')
+        }
+    }]
+    console.log(carro[0].portas);
+    console.log(carro[0].cor);
+    console.log(carro[0].modelo);
+
+    carro.acelerar();
+    carro.frear();
+
+
+
+</script>
+</html>

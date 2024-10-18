@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 18</title>
+    <script>
+        // Array
+       /* 
+      let x = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+      let y = [];
+      for (let i = 0; i < 50; i++) {
+      y[i] = prompt("Digite 10 coisas");
+      }
+      */
+      //Crie uma estrutura que receba o nome, idade e curso de um aluno. 
+      //Adicione essas informações em um array e exiba no alert
+
+    //   let aluno = [];
+    //   aluno[0] = prompt('nome');
+    //   aluno[1] = prompt('idade');
+    //   aluno[2] = prompt('curso');
+    //   alert("olá "+aluno[0]+", sua idade é "+aluno[1]+" e seu curso é "+aluno[2]);
+    //   alert(aluno.length)
+
+    //   let nome = 'Icaro';
+    //   alert("Oi, meu nome é "+nome+". A terceira letra é "+nome[2]);
+    //   alert(nome.length);
+
+
+ // 2. Considere o seguinte array de notas [5.5, 6, 4.3, 7, 3.2, 8.2]. Crie um algoritmo que 
+ // percorra esse array. E caso encontre alguma nota abaixo da média (média = 6), 
+ // acrescente mais um ponto neste item. Ao final, exiba o array no console.
+
+      // let notas = [5.5, 6, 4.3, 7, 3.2, 8.2];
+      // let tamanhoNota = notas.length;
+      // for (let i = 0; i < tamanhoNota; i++) {
+      // if (notas[i]<6) {
+      // notas[i]++
+      // } 
+      // }
+      // alert(notas);
+
+      // let numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+      // método push() --> adiciona um elemento no final do array
+      
+      // numeros.push(21,39)
+      // console.log(numeros);
+
+      // método pop() --> remove um elemento no final do array
+      
+      // numeros.pop()
+      // console.log(numeros);
+
+      // método shift() --> remove o primeiro elemento do array
+      
+      // numeros.shift()
+      // console.log(numeros);
+
+      // método unshift() --> Adiciona um elemento no inicio do array
+      
+      // numeros.unshift(56);
+      // console.log(numeros);
+
+      // método includes() --> busca um elemento no array e retorna true ou false
+      
+      // console.log(numeros.includes(21));
+
+      // método splice() --> buscar um elemento pelo seu indice e deletar ou substituir
+      
+      // let num2 = [10,20,30,40,50,60,70]
+      // let numerosDel = num2.splice(1,4,2,100,150,200)
+      // console.log(num2);
+      // console.log(numerosDel);
+
+      // 3. Leia 10 números. Se o número for par, adicione o número em um array pares. Se o 
+      // número for ímpar adicione-o em um array de ímpares
+      /*
+      let numPares = []
+      let numImpares = []
+
+        for (let i = 0; i < 10; i++) {
+        let numDigitado = parseFloat(prompt("Digite um número"))
+        if (numDigitado % 2 == 0) {
+        numPares.push(numDigitado)
+        } else {
+        numImpares.push(numDigitado)
+      }  
+      }
+      console.log(numPares);
+      console.log(numImpares);
+      */
+
+      // 4. Você está gerenciando uma fila de atendimento ao cliente. Novos clientes chegam e 
+      // devem ser adicionados ao final da fila. Dado um array representando a fila, adicione um 
+      // novo cliente ao final da fila e imprima o estado atualizado da fila.
+      // Fila: 'Ana', 'Bruno' e 'Carla'
+        
+      // let fila = ['Ana','Bruno','Carla']
+      // let filaAtt = prompt("Organize a fila")
+      // fila.push(filaAtt)
+      // console.log(fila);
+      
+      // 5. Continuando a questão anterior, oo final do dia, você precisa remover o último cliente 
+      // que ficou na fila, pois o atendimento não poderá ser realizado. Dado um array 
+      // representando a fila de atendimento, remova o último cliente da fila e imprima o nome do 
+      // cliente removido, além do estado atualizado da fila.
+        
+        
+        // let filaUlt = [fila.pop(fila)]
+        // console.log(filaUlt);
+        // console.log(fila);
+        
+        // 6. Você está trabalhando em um sistema de gerenciamento de biblioteca e precisa 
+        // verificar se um livro específico está disponível ou não. Você tem um array que contém os 
+        // títulos dos livros disponíveis. Utilizando o método includes(), verifique se o livro desejado 
+        // está na lista e imprima uma mensagem adequada.
+        // Livros disponíveis: "Dom Casmurro", "O Pequeno Príncipe", "1984" e "O Hobbit"
+        
+        // let livrosDisponiveis = ["Dom Casmurro", "O Pequeno Príncipe", "1984", "O Hobbit"]
+        // let livroDesejado = prompt("Qual o livro que você deseja")
+        // console.log(livrosDisponiveis.includes(livroDesejado));
+        
+        // 7. Você é responsável pelo controle de estoque de um supermercado e precisa verificar 
+        // rapidamente se determinado produto está em falta. A lista de produtos em estoque está 
+        // armazenada em um array. Utilizando o método includes(), crie um script que verifique se 
+        // um produto específico está presente no array. Se o produto estiver disponível, imprima 
+        // uma mensagem informando que o produto está em estoque. Caso contrário, informe que 
+        // o produto está em falta.
+        // Em estoque: "arroz", "feijão", "macarrão", "açúcar", "café"
+        /*
+          let estoque = ["arroz", "feijão", "macarrão", "açúcar", "café"]
+          let produto = prompt("qual produto você deseja?")
+          estoque.includes(produto)
+          if (estoque.includes(produto) == false) {
+              alert("Esse produto não está disponível")
+          } else {
+              alert("O produto está disponível no estoque")
+          }
+          */
+
+          // FUNÇÕES
+
+          function soma(a,b) {
+            let soma = a + b
+            return(soma)
+          }
+
+          let n = 14
+          let z = 19
+
+          console.log(soma(n,z));
+
+          function calcMedia(x,y,z,w) {
+            let media = (x+y+z+w)/4
+            return(media)
+          }
+          let media = calcMedia(15,15,20,40)
+
+          console.log(media);
+
+
+
+          
+
+        </script>
+</head>
+<body>
+    
+</body>
+</html>

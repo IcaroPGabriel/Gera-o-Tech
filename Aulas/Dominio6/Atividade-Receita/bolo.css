@@ -1,0 +1,98 @@
+body{
+    background-color: rgb(234, 226, 226);
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+header{
+    color: white;
+    padding: 20px;
+    background-color:rgb(251, 82, 21) ;
+    text-align: center;
+    height: 150px;
+}
+header p{
+    margin: 20px;
+}
+nav a{
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+}
+#introdução{
+    text-align: center;
+    font-size: 30px;
+}
+main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+.bloco1{
+    background-color: white;
+    width: 420px;
+    height: 345px;
+    border-radius: 20px;
+    padding-top: 5px;
+    text-align: justify;
+}
+div h3,p{
+padding: 0 10px;
+    
+}
+img{
+    border-radius: 10px;
+    margin: 0px 0px 0px 20px;
+}
+.bloco2{
+    background-color: white;
+    width: 420px;
+    height: 200px;
+    border-radius: 20px;
+    padding-top: 5px;
+}
+.bloco3{
+    background-color: white;
+    width: 420px;
+    height: 280px;
+    border-radius: 20px;
+    padding-top: 5px;
+}
+.bloco4{
+    background-color: white;
+    width: 420px;
+    height: 380px;
+    border-radius: 20px;
+    text-align: center;
+}
+#tit{
+    padding-top: 5px;
+}
+#subtit{
+    background-color: orangered;
+    color: white;
+    height: 30px;
+    padding-top: 10px;
+    margin: 10px;
+}
+.tabela{
+    width: 400px;
+    text-align: center;
+    margin-left: 15px;
+}
+tr th{
+    background-color: rgb(236, 231, 231);
+}
+#obs{
+    background-color: rgb(238, 232, 232);
+    height: 43px;
+    padding-top: 10px;
+    margin: 10px;
+}
+a:hover{
+    background-color: #f3f4f6;
+    color: black;
+    border-radius: 5px;
+}

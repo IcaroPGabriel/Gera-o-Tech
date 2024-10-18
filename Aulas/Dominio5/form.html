@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esboço formulário</title>
+</head>
+<body>
+    <!-- Abertura de formulário -->
+    <form action="">
+        <!-- Label do formulário -->
+        <label for="nome">Nome: </label>
+        <!-- Imput -->
+        <input type="text" name="Colaborador" id="" required>
+        <br><br>
+        
+        <label for="email">E-mail: </label>
+        <input type="text" name="email" id="email" required>
+        
+        <br><br>
+        
+        <label for="senha">Senha: </label>
+        <input type="password" name="senha" id="senha" required>
+
+        <br><br>
+
+        <label for="idade">Idade: </label>
+        <input type="number" name="idade" id="idade" min="0" max="50" required>
+
+        <br><br>
+
+        <label for="genero">Gênero: </label>
+        <br>
+        <label for="genero">Masculino </label>
+        <input type="radio" name="genero" id="genero" value="masculino">
+        <br>
+        <label for="genero">Feminino </label>
+        <input type="radio" name="genero" id="genero" value="feminino">
+        <br>
+        <label for="genero">Outro(a) </label>
+        <input type="radio" name="genero" id="genero" value="outro">
+        
+        <br><br><br>
+        
+        <label for="linguagem">Marque suas linguagens de programação:</label>
+        <br>
+        <label for="">JavaScript</label>
+        <input type="checkbox" name="js" id="js" value="javascript">
+        <br>
+        <label for="">Python</label>
+        <input type="checkbox" name="js" id="js" value="python">
+        <br>
+        <label for="texto">Digite sua observação: </label><br>
+        <textarea style="resize: none;" name="texto" id="texto" cols="60" rows="5" maxlength="200"></textarea>
+        <br>
+        <label for="cidade">Cidade pretendida: </label>
+        <select name="cidade" id="cidades">
+            <option value="">-- Selecione --</option>
+            <option value="Fortaleza">Fortaleza</option>
+            <option value="Maracanaú">Maracanaú</option>
+            <option value="Pecém">Pecém</option>
+        </select>
+        <div>
+            <br>
+            <input type="submit">
+        </div>
+    
+    </form>
+
+</body>
+</html>

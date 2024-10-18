@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula Nº05</title>
+    <style>
+        tr th, td{
+            border: 1px solid blue;
+        }
+        table{
+            border-collapse: collapse;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- Tabelas
+    rowspan: ocupa mais de uma linha!
+    colspan: ocupa mais de uma coluna!
+    -->
+    <table>
+        <caption>Credenciais</caption>
+        <colgroup>
+            <col style="background-color: green;">
+            <col>
+            <col style="background-color: gray;"> 
+        </colgroup>
+        <tr>
+            <th>Nome</th>
+            <th>Características</th>
+            <th>Cidade</th>
+        </tr>
+        <tr>
+            <td rowspan="2">Gabriel</td>
+            <td> Idade: 21</td>
+            <td rowspan="2">Fortaleza</td>
+        </tr>
+        <tr>
+            <td>Altura: 1,70</td>
+        </tr>
+        <tr>
+            <!--<td> Maria </td>-->
+            <td rowspan="2">Beatriz</td>
+            <td>Idade: 25</td>
+            <td>Fortaleza</td>
+        </tr>
+        <tr>
+            <td>Altura: 1,55</td>
+        </tr>
+        <tr>
+            <td colspan="3">Gabriel</td>
+        </tr>
+    </table>
+</body>
+</html>

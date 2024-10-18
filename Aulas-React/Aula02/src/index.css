@@ -1,0 +1,15 @@
+/* CSS - Global */
+
+body{
+  font-family: 'Times New Roman', Times, serif;
+  background-color: lightslategray;
+}
+
+h1{
+  color: blue;
+}
+
+.paragrafoPrimario{
+  background-color: black;
+  color: white;
+}

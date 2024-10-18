@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 11/10</title>
+</head>
+<style>
+    #informacoes{
+        border: 3px solid black;
+        width: 300px;
+        height: 200px;
+        text-align: center;
+        padding-top: 35px;
+        display: inline-block;
+        margin-left: 38%;
+    }
+    #campoPesquisar{
+        border: 4px solid red;
+        width: 250px;
+        height: 200px;
+        text-align: center;
+        margin-left: 40%;
+
+    }
+</style>
+<body>
+   <article id="informacoes">
+    <label for="modelo">Digite um modelo:</label>
+    <br>
+    <input type="text" name="modelo" id="modelo">
+    <br>
+    <label for="cor">Digite a cor:</label>
+    <br>
+    <input type="text" name="cor" id="cor">
+    <br>
+    <label for="portas">Digite a quantidade de portas:</label>
+    <br>
+    <input type="text" name="portas" id="portas">
+    <br>
+    <label for="imagem">Favor inserir o link da imagem:</label>
+    <br>
+    <input type="text" name="imagem" id="imagem">
+    <br><br>
+    <button type="button" onclick="formulario()">Cadastrar</button>
+    </article><br><br><br><br>
+
+    <article id="campoPesquisar">
+        <h1>Campo de busca</h1>
+        <label for="procurarModelo">Buscar carro que deseja</label>
+        <br><br>
+        <input type="text" name="buscaModelo" id="buscaModelo">
+        <button onclick="busca()" type="button">Buscar</button>
+    </article>
+    <br><br><br><br><br><br><br><br><br><br>
+
+
+</body>
+<script>
+    let carros = [
+
+    ]
+
+    function formulario() {
+
+        
+        
+        let modelo = document.getElementById('modelo').value
+        let cor = document.getElementById('cor').value
+        let portas = document.getElementById('portas').value
+        let imagem = document.getElementById('imagem').value
+        let dados = {
+            modelo: modelo,
+            cor: cor,
+            portas: portas,
+            imagem: imagem
+        }
+        
+        carros.push(dados);
+        console.log(carros);
+    }
+      function busca() {
+        let buscar = document.getElementById('buscaModelo').value
+       buscar = parseInt(buscar)
+        let carroEncontrado = carros[buscar]
+        
+
+         let titulo = document.createElement('h1')
+         titulo.innerHTML = carroEncontrado.modelo
+
+         let resultadoBusca = document.getElementById('campoPesquisar')
+         resultadoBusca.appendChild(titulo)
+
+         let imagem = document.getElementById('img')
+         imagem.setAttribute('src', carroEncontrado.modelo)
+         resultadoBusca.appendChild(imagem)
+      }
+    
+    
+
+</script>
+</html>

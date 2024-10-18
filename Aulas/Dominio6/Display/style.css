@@ -1,0 +1,66 @@
+.cor1{
+    background-color:yellow ;
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+    position: ;
+    
+    top: 100px;
+    bottom: ;
+    left:100px ;
+    right: ;
+    z-index: 3;
+}
+.cor2{
+    background-color:green ;
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+    position: relative;
+    
+    top: 50px;
+    bottom: ;
+    left:50px ;
+    right: ;
+    z-index: 1;
+}
+.cor3{
+    background-color: orange ;
+    width: 200px;
+    height: 200px;
+    display:inline-block;
+    position: relative;
+
+    top: 30px;
+    bottom: ;
+    left: ;
+    right: 60px;
+    z-index: 2;
+}
+.cor4{
+    background-color: pink ;
+    width: 200px;
+    height: 200px;
+    display:inline-block;
+}
+.cor5{
+    background-color:yellow ;
+    width: 200px;
+    height: 200px;
+    display: ;
+    position: sticky;
+    
+    top: 0px;
+    bottom: ;
+    left: ;
+    right: ;
+    z-index: ;
+}
+span{
+    background-color: aqua;
+}
+.container{
+    background-color: red;
+    height: 1000px;
+    position: relative;
+}

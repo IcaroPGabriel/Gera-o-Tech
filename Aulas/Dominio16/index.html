@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 17</title>
+    <script>
+
+        /*
+        let i = 5;
+        while (i < 10) {
+            i+=4
+            console.log(i + 1);
+        }
+
+        do {
+            console.log(i);
+        } while (i < 10);
+        */
+
+        // COM FOR
+
+        /*
+    1. Crie um programa que, utilizando um laço for, imprima os números de 1 a 10 no console.
+        */
+
+        // let z = 1
+        // for (let z = 1; z <=10;z++) {
+        // console.log(z);        
+        // }
+
+        /*
+    2. Crie um programa que, utilizando um laço for, peça ao usuário 5 números e exiba a soma deles no final.
+        */
+
+        // let index = parseInt(prompt("Digite um número"))
+        // index2 = parseInt(prompt("Digite um número"))
+        // index3 = parseInt(prompt("Digite um número"))
+        // index4 = parseInt(prompt("Digite um número"))
+        // index5 = parseInt(prompt("Digite um número"))
+        // for (let index = 1; index < 5; index++) {
+        // console.log(index + 1);
+        // console.log(index2 + 1);
+        // console.log(index3 + 1);
+        // console.log(index4 + 1);
+        // console.log(index5 + 1);
+        // break
+        // }
+
+        /*
+     3. Crie um programa que, utilizando um laço for, receba 10 números do usuário e exiba o maior e o menor número informados.
+        */
+     //    let a = 0
+     //    let b = 20
+     //    for (let i = 1; i <= 10; i++) {
+     //    let numDigitado = parseInt(prompt("Digite um número"))
+     //    if (numDigitado > a) {
+     //    a = numDigitado  
+     //    }
+     //    else if(numDigitado < b){
+     //    b = numDigitado 
+     //    }
+     //    }
+     //    console.log("O maior número digitado foi: "+a);
+     //    console.log("O menor número digitado foi: "+b);
+
+       /*
+    4. Crie um programa que, utilizando um laço for, percorra os números de 1 a 100 e exiba apenas os números pares.
+       */
+
+     //    let y = 0
+     //    for (let y = 0; y <= 100; y++) {
+     //    if (y % 2 == 0) {
+     //    console.log(y);
+     //    }
+     //    }
+
+    /*
+    5. Crie um programa que, utilizando um laço for, peça ao usuário para digitar 5 números e, para cada um, exiba a mensagem dizendo se ele é par ou não
+    */
+    
+    // for (let i = 0; i < 5; i++) {
+    // let digitar = parseInt(prompt("digite um número"))
+    // if (digitar % 2 == 0) {
+    // console.log("O número " + digitar + " é par");
+    // }else{
+    // console.log("O número " + digitar + " é impar");
+    // }
+    // }
+
+        // COM WHILE
+
+        // 1. Crie um programa que, utilizando um laço while, exiba os números de 1 a 10 no console.
+
+        
+        // let i = 1
+        // while (i <= 10) {
+        // console.log(i);
+        // i++
+        // }
+        
+
+        /*
+        2. Crie um programa que, utilizando um laço while, peça ao usuário para digitar números até que o valor 0 seja inserido e, ao final, exiba a soma dos números inseridos.
+        */
+        /*
+        let i = 1
+        let soma = 0
+         while (i != 0) {
+            i = parseInt(Prompt("Digite os números"))
+            soma += i
+         }
+         document.write(soma);
+         */
+
+        /*
+        3. Crie um programa que, utilizando um laço while, peça ao usuário para inserir números até que o total de 5 números pares tenha sido coletado, e exiba esses números.*/
+
+            
+        //  let par = 0
+        //  while (par < 5) {
+        //  i = parseInt(prompt("Digite um número"))
+        //  if (i % 2 == 0) {
+        //  par++
+        //  console.log(i);
+        //  }
+        //  }
+         
+
+        /*
+        4. Crie um programa que, utilizando um laço while, peça ao usuário para inserir uma senha correta (definida previamente) e só permita o encerramento quando o usuário acertar a senha.
+        */
+
+        // let senha = 201509
+        // let senhaCorreta = parseInt(prompt("Digite sua Senha"))
+        // while (senha != senhaCorreta) {
+        // console.log("Senha Incorreta");
+        // senhaCorreta = parseInt(prompt("Digite sua Senha"))
+        // }
+
+        /*
+        5. Crie um programa que, utilizando um laço while, peça ao usuário para digitar 10 números e exiba quantos desses números são primos.
+        */
+        
+        // for (let i = 1; i <=10 ; i++) {}
+
+        /*
+        let primo = 0
+        let num = 0
+        let primos = 0
+        while (primo < 10) {
+        primo++
+        num = parseInt(prompt("Digite os números"))
+        let n = 1
+        let contador = 0
+        while (n <= num) {
+            if (num % n == 0) {
+                contador++
+            }
+            n++
+        }if (contador == 2) {
+            console.log(num + " é numero primo");
+            primos++
+        }
+        }
+        console.log("você digitou "+primos+ " números primos");
+        */
+        
+
+        // COM DO WHILE
+
+        // 1. Crie um programa que, utilizando um laço do...while, exiba os números de 1 a 10 no console.
+
+        //  let x = 1
+        //  do {
+        //  document.write(x + "<hr> <i>")
+        //  x++
+        //  } while (x <= 10);
+            
+         
+
+        // 2. Crie um programa que, utilizando um laço do...while, peça ao usuário para digitar um número positivo, repetindo a solicitação até que um valor positivo seja inserido.
+
+
+        //  do {
+        //  numero = parseInt(prompt("digite um número positivo"))
+        //  } while (numero <= 0);
+        
+        // 3. Crie um programa que, utilizando um laço do...while, peça ao usuário para inserir números até que a soma deles seja maior que 100. Ao final, exiba a soma.
+
+        // let soma = 0
+        // do {
+        // let numeroDigitado = parseInt(prompt("Digite os números"))
+        // soma += numeroDigitado    
+        // } while (soma <= 100);
+        // console.log("Soma igual a "+ soma);
+
+
+
+        // 4. Crie um programa que, utilizando um laço do...while, peça ao usuário para inserir números e calcule a média desses números. O programa deve parar quando o usuário inserir 0.
+
+        // let media = 0
+        // let contador = 0
+        // let soma = 0
+        // let numeroDigitado = 0
+        // do {
+        // numeroDigitado = parseFloat(prompt("Digite as notas"))
+        // soma += numeroDigitado;
+        // contador++;
+        // if (numeroDigitado == 0) {
+        // media = soma / (contador - 1);
+        // }
+        // } while (numeroDigitado != 0);
+        // document.write('A média é: '+ media)
+
+        // 5. Crie um programa que, utilizando um laço do...while, peça ao usuário para inserir números até que ele insira 5 números ímpares consecutivos. Ao final, exiba esses números.
+
+        let numeroDig = 0
+        let conta = 0
+        let numerosImpares = []
+        
+        do {
+        numeroDig = parseInt(prompt("Digite algum número"))
+        if (numeroDig % 2 == 1) {
+        conta++;
+        numerosImpares[conta] = numeroDig;
+        }else{
+        conta = 0  
+        }
+        } while (conta != 5);
+        document.write("Voce digitou 5 num impares consecutivos");
+        document.write("\n Os números são: "+numerosImpares)
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

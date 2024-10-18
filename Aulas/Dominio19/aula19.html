@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 20</title>
+    <script>
+        // if ternário
+        // let idade = parseInt(prompt("Digite sua idade"));
+        // let mensagem = idade >= 18 ? "É maior de idade":"É menor de idade";
+        // alert(mensagem);
+
+        // Switch case
+
+        // let n = parseInt(prompt('Digite um número de 1 à 7'))
+
+        // switch (n) {
+        //     case 1:
+        //         alert('Domingo')
+        //         break;
+
+        //     case 2:
+        //         alert('Segunda')
+        //         break;
+        
+        //     case 3:
+        //         alert('Terça')
+        //         break;
+        
+        //     case 4:
+        //         alert('Quarta')
+        //         break;
+        
+        //     case 5:
+        //         alert('Quinta')
+        //         break;
+
+        //     case 6:
+        //         alert('Sexta')
+        //         break;
+
+        //     case 7:
+        //         alert('Sábado')
+        //         break;
+        
+        //     default:
+        //         alert("Dia inválido")
+        //         break;
+        // }
+
+        // Função com parâmetro e com retorno
+
+        /*let soma
+        function adicao(x, y) {
+          let soma = x + y;
+          return soma;
+        }
+        adicao(5,15);*/
+
+        // Função sem parâmetros e com retorno
+        /*
+        function mensagemErro() {
+            return "A operação falhou"
+        }
+        alert(mensagemErro())
+        */
+        // Função sem parâmetros e sem retorno
+        /*
+        function mensagemSucesso() {
+            alert("Operação deu certo");
+        }
+        mensagemSucesso();
+        */
+        // Função expressa
+        /*
+        let multiplicar = function (a,b) {
+            let produto = a*b
+            return produto;
+        }
+        alert(multiplicar(4,5))
+        */
+        // Arrow function
+        /*
+        let dividir = (a,b) => a / b;
+
+        alert(dividir(20, 4))
+        */
+        // Função anônima
+
+
+        // Funções para array
+
+        // pop() -> retirar o ultimo
+        // push() -> adiciona no final
+        // shift() -> retira do inicio
+        // unshift() -> adiciona um elemento no começo
+        // includes() -> retorna verdadeiro ou falso se houver o elemetno
+        // splice(índice, quantidade de elementos, "opcional, substitui") -> busca um elemento pelo indice deleta ou substitui
+
+      //concat() -> concatena 2 ou mais arrays
+
+      /*
+      let primCaixa = [1,2,3,4,5]
+      let segCaixa = [6,7,8,9,10]
+
+      let caixaAtt = primCaixa.concat(segCaixa);
+        // alert(caixaAtt);
+
+        // primCaixa.splice(3,1)
+        // alert(primCaixa);
+
+        // slice()
+
+        let primcaixaAtt = primCaixa.slice(2,3)
+
+        console.log(primcaixaAtt);
+        console.log(primCaixa);
+        */
+
+       
+         // QUESTÕES
+
+        /*
+        1. Faça um procedimento que recebe a idade de um nadador por parâmetro e retorna, também por parâmetro, a categoria desse nadador de acordo com a tabela abaixo: 
+        *Idade*           *Categoria* 
+        5 a 7 anos        Infantil A 
+        8 a 10 anos       Infantil B 
+        11-13 anos        Juvenil A 
+        14-17 anos        Juvenil B 
+        Maiores de Adulto 
+        18 anos (inclusive)
+        */
+
+         
+         let idade = parseInt(prompt("Informe a sua idade"))
+
+         switch (idade) {
+            case 5:
+            case 6:
+            case 7:
+                alert("Infantil A")
+                break;
+
+            case 8:
+            case 9:
+            case 10:
+                alert("Infantil B")
+                break;
+
+            case 11:
+            case 12:
+            case 13:
+                alert("Juvenil A")
+                break;
+
+            case 14:
+            case 15:
+            case 16:
+            case 17:
+                alert("Juvenil B")
+                break;
+
+            case 18:
+            alert("Maiores de adulto")
+                break
+            default:
+                alert("Idade inválida")
+                break;
+         }
+
+         /*
+         2. Faça uma função que recebe um valor inteiro e verifica se o valor é positivo ou 
+        negativo. A função deve retornar um valor booleano.*/
+
+        /*
+        let numero = parseInt(prompt("Favor digitar um número"))
+        function valor(numero) {
+            if (numero > 0) {
+                alert("Número positivo")
+            } else {
+                alert("Número negativo")
+            }
+            return valor
+        }
+         valor(numero)
+        */
+
+        /*
+         3. Faça um procedimento que recebe 3 valores inteiros por parâmetro e retorna-os 
+        ordenados em ordem crescente.*/
+        /*
+        let x = parseInt(prompt("Digite o primeiro número"))
+        let y = parseInt(prompt("Digite o segundo número"))
+        let z = parseInt(prompt("Digite o terceiro número"))
+        let espaco = []
+
+        function ordem(x,y,z,) {
+            if (x>y && x>z) {
+                espaco[2] = x 
+            } if (y>z) {
+                espaco.push()
+            } else {
+                espaco.unshift()
+            }
+            if (z>x && z>y) {
+                espaco.push()
+            } else {
+                espaco.unshift()
+            }
+
+            return ordem
+        }
+        ordem()
+        */
+
+        
+
+       
+
+
+
+
+    
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

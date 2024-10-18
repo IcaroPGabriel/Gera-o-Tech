@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quadro de medalhas</title>
+    <style>
+        table{
+            border-collapse: collapse;
+            text-align: center;
+        }
+        tr th,td{
+            border: 2px solid black;
+            padding: 3px;
+        }
+        #medalhas{
+            width: 25px;
+            
+        }
+        #bandeiras{
+            width: 35px;
+        }
+        #pontuação{
+            border: 2px solid black;
+            width: 120px;
+            padding-left: 10px;
+        }
+        #med{
+            width: 20px;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <caption style="border: 2px solid black;border-collapse: collapse;">Tabela de medalhas</caption>
+        <colgroup>
+            <col>
+            <col style="width: 200px;">
+            <col style="background-color:gold;">
+            <col style="background-color: silver;">
+            <col style="background-color: coral;">
+        </colgroup>
+        <tr>
+            <th colspan="2">Equipes</th>
+            <th><img id="medalhas" src="imagensTabela/ouro.png" alt=""></th>
+            <th><img id="medalhas" src="imagensTabela/prata.png" alt=""></th>
+            <th><img id="medalhas" src="imagensTabela/bronze.png" alt=""></th>
+            <th>Total de pontos</th>
+        </tr>
+        <tr>
+            <td><img id="bandeiras" src="imagensTabela/noruega.jpg" alt="Noruega"></td>
+            <td>Noruega</td>
+            <td>30</td>
+            <td>20</td>
+            <td>10</td>
+            <td>140 pts</td>
+        </tr>
+        <tr>
+            <td><img id="bandeiras" src="imagensTabela/roc.jpg" alt="ROC"></td>
+            <td>ROC</td>
+            <td>10</td>
+            <td>5</td>
+            <td>25</td>
+            <td>65 pts</td>
+        </tr>
+        <tr>
+            <td><img id="bandeiras" src="imagensTabela/alem.jpg" alt="Alemanha"></td>
+            <td>Alemanha</td>
+            <td>15</td>
+            <td>10</td>
+            <td>20</td>
+            <td>85 pts</td>
+        </tr>
+        <tr>
+            <td><img id="bandeiras" src="imagensTabela/canada.jpg" alt="Canadá"></td>
+            <td>Canadá</td>
+            <td>5</td>
+            <td>2</td>
+            <td>35</td>
+            <td>54 pts</td>
+        </tr>
+        <tr>
+            <td><img id="bandeiras" src="imagensTabela/EUA.jpg" alt="EUA"></td>
+            <td>Estados Unidos da América</td>
+            <td>12</td>
+            <td>15</td>
+            <td>3</td>
+            <td>69 pts</td>
+        </tr>
+        </div>
+    </table>
+    <br>
+        <div id="pontuação">
+            <caption>Pontuação:</caption><br>
+            <tr>
+                <td><img id="med" src="imagensTabela/ouro.png" alt=""></td>
+                <td id="pontos"><strong>3 pontos</strong></td>
+            </tr>
+            <br>
+            <tr>
+                <td><img id="med" src="imagensTabela/prata.png" alt=""></td>
+                <td id="pontos"><strong>2 pontos</strong></td>
+            </tr>
+            <br>
+            <tr>
+                <td><img id="med" src="imagensTabela/bronze.png" alt=""></td>
+                <td id="pontos"><strong>1 ponto</strong></td>
+            </tr>
+        </div>
+
+</body>
+</html>

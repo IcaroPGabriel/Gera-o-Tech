@@ -1,0 +1,44 @@
+body{
+    padding: 0;
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.topoHeader{
+    display: flex;
+    justify-content: space-between;
+}
+header{
+    background-image: url(imagens/SmartSelect_20240919_110351_Samsung\ Notes.jpg);
+    background-size: cover;
+}
+header h1{
+text-align: center;
+color: white;
+}
+.endereco{
+    text-align: center;
+}
+.linkEndereco{
+    text-align: center;
+}
+.primeirosItens{
+    display: flex;
+   justify-content: center;
+   align-items: baseline;
+}
+.descricaoCard{
+    width: 200px;
+}
+.imgCard{
+    width: 170px;
+}
+.segundaImagem{
+    display: flex;
+    justify-content: center;
+    
+}
+.imgCard2{
+    width: 500px;
+    height: 300px;
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula</title>
+</head>
+<style>
+    .gokuinstsup{
+        border: solid 6px blue;
+    }
+    .gokussj{
+        border: solid 6px red;
+    }
+    .yadorat{
+        border-radius: 30px;
+        margin: 50px;
+        padding: 40px;
+        background-color: green;
+    }
+</style>
+<body>
+    <h3>Valor dos inputs -> .value</h3>
+    <h3>Conteúdo do HTML de uma tag -> .innerHTML -> Processa o código HTML</h3>
+    <h3>Conteúdo textual de uma tag -> .textContent -> Não processa os códigos</h3>
+    <h3>Manipulação de atributos -> .setAttribute('atributo','valor')</h3>
+    <h3>Acessar atributos -> .getAttribute('atributos')</h3>
+    <h3>remove atributos -> .removeAttribute('atributos')</h3>
+
+    <h2>Manipulação de Estilo</h2>
+    <h3>Modificação de estilos</h3>
+
+    <ul>
+        <li>Adicionar -> .classlist.add('Classe')</li>
+        <li>Remover -> .classlist.remove('Classe')</li>
+        <li>Trocar -> .classlist.toggle('Classe')</li>
+        <li>Verificar classe -> .classlist.contains ('Classe')</li>
+    </ul>
+
+    <p onclick="verificarParagrafo()" id="paragrafo1">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse porro, consequatur vel libero assumenda nisi illo nostrum doloremque harum? Assumenda odit et veritatis ipsam alias accusantium minus quasi recusandae molestiae.</p>
+    <p onclick="verificarParagrafo()" id="paragrafo2">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse porro, consequatur vel libero assumenda nisi illo nostrum doloremque harum? Assumenda odit et veritatis ipsam alias accusantium minus quasi recusandae molestiae.</p>
+
+    <img class="gokuinstsup" id="img1"  src="https://store-images.s-microsoft.com/image/apps.40217.14505734480956052.6ba772d2-2c6d-41df-8199-e37e49dcaa49.5eb9edb6-65cc-4f51-b9a5-09b7d6f1db52?q=90&w=480&h=270" alt="Dragon ball Z" width="300px" height="200px">
+    <br>
+    <button onclick="trocarImagem()">Trocar Imagem</button>
+    <br>
+    <button id="botao" onclick="removerAtributo()">Remover Imagem</button>
+    <br>
+    <button id="botao2" onclick="adicionarClasse()">Adicionar classe</button>
+    <br>
+    <button id="botao3" onclick="removerClasse()">Remover classe</button>
+
+</body>
+<script>
+    function verificarParagrafo() {
+        let paragrafo1 = document.getElementById('paragrafo1')
+        let paragrafo2 = document.getElementById('paragrafo2')
+        console.log(paragrafo1.innerHTML);
+        paragrafo1.innerHTML = '<h1>Aqui era um parágrafo</h1>'
+
+        paragrafo2.textContent = '<h1>Aqui era um parágrafo</h1>'
+        console.log(paragrafo2.textContent);
+    }
+
+    let imagem1 = "https://store-images.s-microsoft.com/image/apps.40217.14505734480956052.6ba772d2-2c6d-41df-8199-e37e49dcaa49.5eb9edb6-65cc-4f51-b9a5-09b7d6f1db52?q=90&w=480&h=270"
+    let imagem2 = 'https://cdn.dlcompare.com/others_jpg/upload/news/image/en-dragon-ball-sparking-zero-rev-a9854609-image-a98545ec.jpg.webp'
+
+    function trocarImagem() {
+        let imagem = document.getElementById('img1')
+
+        if (imagem.getAttribute('src') == imagem1) {
+            imagem.setAttribute('src', imagem2)
+        } else {
+            imagem.setAttribute('src', imagem1)
+        }
+        
+
+    }
+    function removerAtributo() {
+        let imagem = document.getElementById('img1')
+        let botao = document.getElementById('botao')
+       
+        if (imagem.getAttribute('src') == null) {
+            imagem.setAttribute('src',imagem1 )
+            botao.textContent = 'Remover Imagem'
+        } else {
+            imagem.removeAttribute('src')
+            botao.textContent = 'Voltar Imagem'
+        }
+
+        
+    }
+
+    function adicionarClasse() {
+        let imagem = document.getElementById('img1')
+        imagem.classList.add('yadorat')
+
+        let temClasse = imagem.classList.contains('gokussj')
+        console.log(temClasse);
+    }
+
+    function removerClasse() {
+        let imagem = document.getElementById('img1')
+        imagem.classList.toggle('gokussj')
+    }
+
+
+</script>
+</html>

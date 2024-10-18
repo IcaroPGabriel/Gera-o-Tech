@@ -1,0 +1,14 @@
+.primaria{
+    background-color: darkviolet;
+    color: green;
+    padding: 15px;
+}
+.secundaria{
+    background-color: maroon;
+    color: orange;
+    padding: 20px;
+}
+.fonte{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 15px;
+}

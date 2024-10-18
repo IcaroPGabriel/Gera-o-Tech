@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <style>
+        h2{
+            padding-left: 80px;
+        }
+        form{
+            background-color: silver;
+            width: 450px;
+            padding: 20px;
+            border-radius: 10px;
+            border-collapse: collapse;
+        }
+        select{
+            width: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h2>Formulário de candidatura</h2>
+    <form action="">
+            <label for="nome">Nome: </label>
+            <input type="text" id="nome" name="nome">
+            <br><br>
+            <label for="email">Email: </label>
+            <input type="email" id="email" name="email">
+            <br><br>
+            <label for="cargo">Cargo de tecnologia:</label>
+            <select name="cargo" id="cargos">
+                <option value="">-- Selecione --</option>
+                <option value="pessoa desenvolvedora">Pessoa Desenvolvedora</option>
+                <option value="programador web">Programador web</option>
+                <option value="arquiteto de redes">Arquiteto de redes</option>
+            </select>
+            <br><br>
+            <label for="genero">Gênero: </label>
+            <input type="radio" id="masculino" name="masculino">
+            <label for="masculino">Masculino</label>
+            <input type="radio" id="feminino" name="feminino">
+            <label for="feminino">Feminino</label>
+            <input type="radio" id="outro" name="outro">
+            <label for="outro">Outro(a)</label>
+            <br><br>
+            <label for="cidades">Unidades de interesse:</label>
+            <input type="checkbox" id="fortaleza" name="fortaleza">
+            <label for="fortaleza">Fortaleza</label>
+            <input type="checkbox" id="maracanau" name="maracanau">
+            <label for="maracanau">Maracanaú</label>
+            <input type="checkbox" id="sobral" name="sobral">
+            <label for="sobral">Sobral</label>
+            <br><br>
+            <label for="Comentários">Fale um pouco mais sobre seu perfil:</label><br>
+            <textarea style="resize: none;" name="texto" id="texto" cols="50" rows="5"></textarea>
+            <br><br>
+            <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>

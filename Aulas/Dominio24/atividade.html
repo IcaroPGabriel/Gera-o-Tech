@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade</title>
+    <script>
+    
+    let carros = [
+            { modelo: 'Fusca', preco: 15000, ano: 1972 },
+            { modelo: 'Civic', preco: 80000, ano: 2020 },
+            { modelo: 'Fiesta', preco: 45000, ano: 2015 },
+            { modelo: 'Camaro', preco: 300000, ano: 2021 },
+            { modelo: 'Gol', preco: 30000, ano: 2010 },
+            { modelo: 'Corolla', preco: 70000, ano: 2019 }
+        ];
+
+        function listaCarros() {
+            carros.forEach(
+                marca => {
+                console.log("O carro "+ marca.modelo+" custa "+marca.preco);
+                }
+                )
+        }
+
+
+    </script>
+</head>
+<body>
+<article>
+<h1>Lista de carros</h1>
+<section>
+<button id="listarCarros" onclick="listaCarros()">Listar carros</button>
+<button id="mostrarModelos" onclick="">Mostrar Modelos</button>
+<button id="filtrarCarros" onclick="">Filtrar carros caros</button>
+<button id="calcularPreco" onclick="">calcular preço total</button>
+</section>
+</article>
+    
+</body>
+</html>
