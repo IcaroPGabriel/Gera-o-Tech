@@ -1,19 +1,30 @@
 import { useState } from 'react';
-import  styles from './Cmp1.module.css';
 
-function Cmp1(prop) {
+
+function Cmp1(usuario) {
+    let [nome, setNome] = useState('')
+    let [idade, setIdade] = useState('')
+    let [profissao, setProfissao] = useState('')
+    let {clicar, setClicar} = useState(false)
+    function mostrarUsuario() {
+    
+        setNome(usuario.nome)
+        setIdade(usuario.idade)
+        setProfissao(usuario.profissao)
+        setClicar(true)
+    }
   
-    console.log(prop.nome);
-    
-   
-    
-    
+
     return ( 
         <>
-        <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, corporis obcaecati autem consequuntur assumenda, suscipit, pariatur atque aspernatur ratione enim neque sit corrupti alias! Explicabo veritatis quas voluptatum ipsam ad.</p>
-       
+            <button onClick={mostrarUsuario} type="button">Mostrar Usuário</button>
 
+            {clicar && (
+            <p>
+                Nome: {usuario.nome}, Idade: {usuario.idade} e Profissão: {usuario.profissao}
+            </p>
+            )}
+            
         </>
 
      );
