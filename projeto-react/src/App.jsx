@@ -2,14 +2,24 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import PageItens from '../pages/PageItens'
+
+
 
 function App() {
 
   return (
     <>
-    <h2>TESTANDO A PÁGINA DE ITENS</h2>
-      <PageItens/>
+    <h1>TESTANDO A PÁGINA DE ITENS</h1>
+    <article>
+    <h2>FILTROS DA PÁGINA</h2>
+      <section>
+        
+      </section>
+    </article>
+      
+
+    
+
     </>
   )
 }
