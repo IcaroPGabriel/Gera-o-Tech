@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Comp1 from '../componentes/Cmp1'
 
+
 function App() {
   let [mostrar, setMostrar ] = useState(false)
   let [msgBtn, setMsgBtn] = useState('Mostrar Imagem')
@@ -31,6 +32,7 @@ function App() {
       )}
 
       <Comp1/>
+      <DynamicDemo/>
     </>
   )
 }
