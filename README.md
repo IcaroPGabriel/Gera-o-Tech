@@ -1,2 +1,2 @@
 # Gera-o-Tech
-Aprendizado do curso Geração Tech
+Todos os conteúdos que foram repassados do curso Geração Tech
