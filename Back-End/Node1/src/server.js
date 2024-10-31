@@ -54,27 +54,82 @@
 // CRIAR UMA FUNÇÃO DE LOGIN QUE RECEBA E-MAIL E SENHA, SE FOREM IGUAIS AS VARIÁVEIS JÁ DEFINIDAS, RETORNAR UM TOKEN. ESSE TOKEN DEVE SER USADO NA FUNÇÃO DE PRODUTOS, QUE SÓ MOSTRA OS PRODUTOS SE O TOKEN FOR IGUAL AO JÁ DEFINIDO NA FUNÇÃO.
 
 
-function credenciais(email,senha) {
+// const login = (email, senha) => {
   
-  const UserEmail = 'caiodantas56@gmail.com'
-  const password = '456789'
-  const token = 'icaro12' 
+//   const Useremail = 'thiago.arruda.09@hotmail.com';
+//   const Usersenha = 'thiago123'
+//   const token = {"result": true, "token": '123456', "message": 'Deu bom!'}
 
-  
+// if (Useremail === email && Usersenha === senha){
+//   console.log(token)
+// }
+// else{
+//   console.log({"result": false, "token": '', "message": 'Deu ruim!'})
+// }
+// }
 
-  if (UserEmail === email && password === senha) {
-     alert(token)
-  } else {
-    console.log("Credenciais erradas");
+// login('thiago.arruda.09@hotmail.com','sdds')
+
+// const produtos = async(token) => {
+//     const data =
+//       [{
+//        nome:'sapato nike1',
+//        preço:300
+//       },
+//       {
+//        nome:'sapato nike2',
+//        preço:400
+//       },
+//       {
+//        nome:'sapato nike3',
+//        preço:500
+//       }]
+
+//     if (token == 123456){
+//       console.log({"result": true, "products": data, "message": 'Deu bom!'})
+//     }  else{
+//       console.log({"result": false, "products": [], "message": 'Deu ruim!'})
+//   }
+// }
+
+// produtos('1234567')
+
+
+// const jwt = require('jsonwebtoken')
+// const token = jwt.sign({id: 1, name:'Icaro'}, 'flefekfrprpggpr')
+
+// console.log(token);
+
+/*
+const nome = 'Rafael';
+const numero = 21;
+const jwt = require('jsonwebtoken')
+const token = jwt.sign({id: numero, name:nome}, 'flefekfrprpggpr')
+
+const jwtVerify = (tokenUser) => {
+  try {
+    const decoded = jwt.verify(tokenUser, 'flefekfrprpggpr')
+  return decoded
+  } catch (error) {
+    console.log(`Inválido${error}`);
     
   }
-
-  function produtos (token) {
-    
-  }
-
-
-
-
-
+  
 }
+
+console.log(jwtVerify(token));
+*/
+
+// FAÇA A LÓGICA DE LOGIN PARA RETORNAR O TOKEN DE USUÁRIO. E A FUNÇÃO DE PRODUTOS SÓ MOSTRARÁ OS DADOS SE O TOKEN FOR VÁLIDO.
+
+
+
+
+
+
+
+
+
+
+
+
