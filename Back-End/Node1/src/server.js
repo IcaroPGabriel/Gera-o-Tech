@@ -122,14 +122,188 @@ console.log(jwtVerify(token));
 
 // FAÇA A LÓGICA DE LOGIN PARA RETORNAR O TOKEN DE USUÁRIO. E A FUNÇÃO DE PRODUTOS SÓ MOSTRARÁ OS DADOS SE O TOKEN FOR VÁLIDO.
 
+// const jwt = require('jsonwebtoken')
+// const token = jwt.sign({id: 1, name: 'David'}, 'asdsdjfgfkjsd')
+
+// const jwtVerify = (tokenUser) => {
+//   try {
+//     const decoded = jwt.verify(tokenUser, 'asdsdjfgfkjsdAASAS')
+//     return decoded
+
+//   } catch (error) {
+//     console.log(`Deu ruim! ${error}`)
+//   }
+// }
+// console.log(jwtVerify(token))
+
+// CRIE UMA FUNÇÃO DE LOGIN QUE RECEBA EMAIL E SENHA, SE FOREM IGUAIS AS VARIÁVEIS JÁ DEFINIDAS, RETORNAR UM TOKEN. ESSE TOKEN DEVE SER USADO NA FUNÇÃO DE PRODUTOS, QUE SÓ MOSTRA OS PRODUTOS SE O TOKEN FOR IGUAL AO JÁ DEFINIDO NA FUNÇÃO.
+
+// function login(email, senha) {
+//   const UserEmail = "thiago.arruda.09@hotmail.comsdasd";
+//   const UserSenha = "thiago123";
+
+//   if (email == UserEmail && senha == UserSenha) {
+//     const jwt = require('jsonwebtoken');
+//     const token = jwt.sign({ id: 1, name: "thiago" }, "sudgsajkcsiuchsck");
+//     return token
+//   } else {
+//     console.log("email ou senha invalidos");
+//   }
+// }
+
+// console.log(login("thiago.arruda.09@hotmail.com", "thiago123"))
+
+  // const produtos = (tokenUser) => {
+  //   const jwt = require('jsonwebtoken');
+  //   try {
+  //     const decoded = jwt.verify(tokenUser, "sudgsajkcsiuchsck");
+  //     const data = [
+  //       {
+  //         nome: "sapato nike1",
+  //         preço: 300,
+  //       },
+  //       {
+  //         nome: "sapato nike2",
+  //         preço: 400,
+  //       },
+  //       {
+  //         nome: "sapato nike3",
+  //         preço: 500,
+  //       },
+  //     ];
+  //     if (decoded) {
+  //       console.log(data);
+  //     }
+  //     return decoded;
+
+   
+  //   } catch (error) {
+  //     console.log(`Deu ruim! ${error}`);
+  //   }
+  // };
+
+  // app.get('/produtos',  (req, res)=> {
+  //   res.send([{
+  //       name: "sapato nike",
+  //       price: 300,
+  //       image: "sapato3.png",
+  //     },
+  //     {
+  //       name: "sapato nike2",
+  //       price: 400,
+  //       image: "sapato3.png",
+  //     },
+  //     {
+  //       name: "sapato nike3",
+  //       price: 500,
+  //       image: "sapato3.png",
+  //     },
+  //     {
+  //       name: "sapato nike4",
+  //       price: 600,
+  //       image: "sapato3.png",
+  //     },
+  //     {
+  //       name: "sapato nike5",
+  //       price: 700,
+  //       image: "sapato3.png",
+  //     },
+  //     {
+  //       name: "sapato nike6",
+  //       price: 800,
+  //       image: "sapato3.png",
+  //     },
+  //     {
+  //       name: "sapato nike7",
+  //       price: 900,
+  //       image: "sapato3.png",
+  //     },
+  //     {
+  //       name: "sapato nike8",
+  //       price: 1000,
+  //       image: "sapato3.png",
+  //     }])
+  // })
+
+  const express = require('express')
+  const app = express()
+  app.use(express.json())
+
+// CRIANDO UMA ROTA PARA A API
+app.get('/home', function (req, res) {
+  res.send('Hello World')
+})
+
+// CRIANDO UMA ROTA PARA A API
+app.get('/states', function (req, res) {
+    res.send({
+        'Ceará': 10,
+        'Bahia': 8,
+        'Pernambuco':7.78,
+        'piauí': 6.4
+    })
+  })
+
+app.get('/users', function(req, res) {
+    res.send(
+        [{
+          nome: 'Icaro',
+          idade:'25',
+          genero: 'Masculino'
+        },{
+          nome: 'Gabriel',
+          idade:'23',
+          genero: 'Masculino'
+        },{
+          nome: 'Marcos',
+          idade:'21',
+          genero: 'Feminino'
+
+        },{
+          nome: 'Ana',
+          idade:'22',
+          genero: 'Feminino'
+        }]
+
+    )
+  })
+
+  app.get('/login', (req,res)=>{
+    const email = req.query.email
+    const password = req.query.password
+
+      const UserEmail='icaropereira45@hotmail.com';
+      const UserPassword='icaro0294'
+
+      if(email===UserEmail && password===UserPassword){
+        const jwt = require('jsonwebtoken');
+        const token=jwt.sign({id: 21, nome:'icaro'}, '43er56753323ty')
+        res.send({
+          'sucess': true,
+          'token': token,
+          'error': ''
+        })
+      }else{
+        res.send({
+          'sucess': true,
+          'token': '',
+          'error': 'Usuário ou senha inválida!'
+      }
+
+
+  
+  })
 
 
 
 
+  
 
-
-
-
+// SUBINDO O SERVIDOR NA PORTA 3000
+const PORT = 3000
+app.listen(PORT, () => {
+    console.log(`O servidor está rodando na porta ${PORT}`);
+})
 
 
 
