@@ -1,9 +1,16 @@
 // // IMPORTANDO O MÓDULO EXPRESS
 // const express = require('express')
+
 // // APP RECEBE O EXPRESS
 // const app = express()
+
 // // PERMITE QUE O SERVIDOR ENTENDA JSON NO CORPO DAS REQUISIÇÕES
 // app.use(express.json())
+
+// // SUBINDO O SERVIDOR NA PORTA 3000
+// const PORT = 3000
+// app.listen(PORT, () => {
+// console.log(`O servidor está rodando na porta ${PORT}`);
 
 // // CRIANDO UMA ROTA PARA A API
 // app.get('/home', function (req, res) {
@@ -44,10 +51,7 @@
 //     )
 //   })
 
-// // SUBINDO O SERVIDOR NA PORTA 3000
-// const PORT = 3000
-// app.listen(PORT, () => {
-//     console.log(`O servidor está rodando na porta ${PORT}`);
+
     
 // } )
 
@@ -268,31 +272,39 @@ app.get('/users', function(req, res) {
     )
   })
 
-  app.get('/login', (req,res)=>{
-    const email = req.query.email
-    const password = req.query.password
-
-      const UserEmail='icaropereira45@hotmail.com';
-      const UserPassword='icaro0294'
-
-      if(email===UserEmail && password===UserPassword){
-        const jwt = require('jsonwebtoken');
-        const token=jwt.sign({id: 21, nome:'icaro'}, '43er56753323ty')
+  app.get('/login', (req, res) => {
+    try {
+      const email = req.query.email
+      const senha = req.query.senha
+  
+      const emailUser = 'david@exemplo.com.br'
+      const senhaUser = '123456'
+  
+      if (email === emailUser && senha === senhaUser){
+        const jwt = require('jsonwebtoken')
+        const token = jwt.sign({id: 1, name: 'David'}, 'asdsdjfgfkjsd')
+  
         res.send({
           'sucess': true,
           'token': token,
           'error': ''
         })
-      }else{
+      } else {
         res.send({
           'sucess': true,
           'token': '',
           'error': 'Usuário ou senha inválida!'
+        })
       }
-
-
-  
+    } catch(error) {
+      res.send({
+        'sucess': false,
+        'token': '',
+        'error': 'Deu ruim!'
+      })
+    }
   })
+  
 
 
 
