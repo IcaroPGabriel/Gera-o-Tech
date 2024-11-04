@@ -1,16 +1,22 @@
 // // IMPORTANDO O MÓDULO EXPRESS
-// const express = require('express')
+ const express = require('express');
 
 // // APP RECEBE O EXPRESS
-// const app = express()
+ const app = express();
 
 // // PERMITE QUE O SERVIDOR ENTENDA JSON NO CORPO DAS REQUISIÇÕES
-// app.use(express.json())
+ app.use(express.json());
 
-// // SUBINDO O SERVIDOR NA PORTA 3000
-// const PORT = 3000
-// app.listen(PORT, () => {
-// console.log(`O servidor está rodando na porta ${PORT}`);
+//  EXPORTAR ROTAS
+const login = require('./routes/RouterLogin');
+app.use('/login', login);
+
+// SUBINDO O SERVIDOR NA PORTA 3000
+const PORT = 3000;
+app.listen(PORT, () => {
+    console.log(`O servidor está rodando na porta ${PORT}`);
+})
+
 
 // // CRIANDO UMA ROTA PARA A API
 // app.get('/home', function (req, res) {
@@ -229,81 +235,81 @@ console.log(jwtVerify(token));
   //     }])
   // })
 
-  const express = require('express')
-  const app = express()
-  app.use(express.json())
+  // const express = require('express')
+  // const app = express()
+  // app.use(express.json())
 
 // CRIANDO UMA ROTA PARA A API
-app.get('/home', function (req, res) {
-  res.send('Hello World')
-})
+// app.get('/home', function (req, res) {
+//   res.send('Hello World')
+// })
 
 // CRIANDO UMA ROTA PARA A API
-app.get('/states', function (req, res) {
-    res.send({
-        'Ceará': 10,
-        'Bahia': 8,
-        'Pernambuco':7.78,
-        'piauí': 6.4
-    })
-  })
+// app.get('/states', function (req, res) {
+//     res.send({
+//         'Ceará': 10,
+//         'Bahia': 8,
+//         'Pernambuco':7.78,
+//         'piauí': 6.4
+//     })
+//   })
 
-app.get('/users', function(req, res) {
-    res.send(
-        [{
-          nome: 'Icaro',
-          idade:'25',
-          genero: 'Masculino'
-        },{
-          nome: 'Gabriel',
-          idade:'23',
-          genero: 'Masculino'
-        },{
-          nome: 'Marcos',
-          idade:'21',
-          genero: 'Feminino'
+// app.get('/users', function(req, res) {
+//     res.send(
+//         [{
+//           nome: 'Icaro',
+//           idade:'25',
+//           genero: 'Masculino'
+//         },{
+//           nome: 'Gabriel',
+//           idade:'23',
+//           genero: 'Masculino'
+//         },{
+//           nome: 'Marcos',
+//           idade:'21',
+//           genero: 'Feminino'
 
-        },{
-          nome: 'Ana',
-          idade:'22',
-          genero: 'Feminino'
-        }]
+//         },{
+//           nome: 'Ana',
+//           idade:'22',
+//           genero: 'Feminino'
+//         }]
 
-    )
-  })
+//     )
+//   })
 
-  app.get('/login', (req, res) => {
-    try {
-      const email = req.query.email
-      const senha = req.query.senha
+//   app.get('/login', (req, res) => {
+//     try {
+//       const email = req.query.email
+//       const senha = req.query.senha
   
-      const emailUser = 'david@exemplo.com.br'
-      const senhaUser = '123456'
+//       const emailUser = 'david@exemplo.com.br'
+//       const senhaUser = '123456'
   
-      if (email === emailUser && senha === senhaUser){
-        const jwt = require('jsonwebtoken')
-        const token = jwt.sign({id: 1, name: 'David'}, 'asdsdjfgfkjsd')
+//       if (email === emailUser && senha === senhaUser){
+//         const jwt = require('jsonwebtoken')
+//         const token = jwt.sign({id: 1, name: 'David'}, 'asdsdjfgfkjsd')
   
-        res.send({
-          'sucess': true,
-          'token': token,
-          'error': ''
-        })
-      } else {
-        res.send({
-          'sucess': true,
-          'token': '',
-          'error': 'Usuário ou senha inválida!'
-        })
-      }
-    } catch(error) {
-      res.send({
-        'sucess': false,
-        'token': '',
-        'error': 'Deu ruim!'
-      })
-    }
-  })
+//         res.send({
+//           'sucess': true,
+//           'token': token,
+//           'error': ''
+//         })
+//       } else {
+//         res.send({
+//           'sucess': true,
+//           'token': '',
+//           'error': 'Usuário ou senha inválida!'
+//         })
+//       }
+//     } catch(error) {
+//       res.send({
+//         'sucess': false,
+//         'token': '',
+//         'error': 'Deu ruim!'
+//       })
+//     }
+//   })
   
 
 
@@ -312,10 +318,10 @@ app.get('/users', function(req, res) {
   
 
 // SUBINDO O SERVIDOR NA PORTA 3000
-const PORT = 3000
-app.listen(PORT, () => {
-    console.log(`O servidor está rodando na porta ${PORT}`);
-})
+// const PORT = 3000
+// app.listen(PORT, () => {
+//     console.log(`O servidor está rodando na porta ${PORT}`);
+// })
 
 
 
