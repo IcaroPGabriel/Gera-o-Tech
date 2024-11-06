@@ -14,6 +14,9 @@ app.use('/login', login);
 const produtos = require('./routes/RouterProducts');
 app.use('/produtos', produtos);
 
+const users = require('./routes/RouterUsers');
+app.use('/users', users);
+
 // SUBINDO O SERVIDOR NA PORTA 3000
 const PORT = 3000;
 app.listen(PORT, () => {
