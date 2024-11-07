@@ -1,25 +1,14 @@
+const ProductModel = require('../models/ProductModel')
+
 const ProductList = async (req,res) => {
     console.log(req.body);
     
     try {
-        const ListProducts = [
-            {nome:'Tênis Puma',
-             cor:'Azul',
-             preco:100
-            },
-            {nome:'Tênis Nike',
-             cor:'Branco',
-             preco:300
-            },
-            {nome:'Tênis Futsal Adidas',
-             cor:'Preto',
-             preco:400
-            }]
+        const product = await ProductModel.findAll();
 
-        res.send(ListProducts)
-
+        res.send(product)
     } catch (error) {
-        res.send({
+        res.status(400).send({
             sucess: false, 
             message: `Lista de produtos não autorizada${error}`
         })
@@ -27,21 +16,30 @@ const ProductList = async (req,res) => {
 }
 
 const ProductCreate = async (req, res) => {
+    const description = req.body.description
+    const color = req.body.color
+    const price = req.body.price
+    const stock = req.body.stock
+    
     try {
-        const nome = req.body.nome
-        const cor = req.body.cor
-        const preco = req.body.preco
+
+        const ProductRegister = await ProductModel.create({
+            description:description,
+            color:color,
+            price:price,
+            stock:stock
+        })
         
-        res.send({
+        res.status(201).send({
             sucess: true,
-            message: 'Produto cadastrado!!'
+            message: `Produto cadastrado com sucessso! ${ProductRegister.description}`
         })
 
 
 
         
     } catch (error) {
-        res.send({
+        res.status(400).send({
             sucess: false,
             error: `Falha no cadastro!${error}`
         })
