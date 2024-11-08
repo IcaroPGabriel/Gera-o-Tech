@@ -15,6 +15,7 @@ const produtos = require('./routes/RouterProducts');
 app.use('/produtos', produtos);
 
 const users = require('./routes/RouterUsers');
+const { Model } = require('sequelize')
 app.use('/users', users);
 
 // SUBINDO O SERVIDOR NA PORTA 3000

@@ -3,6 +3,7 @@ const { DataTypes } = require('sequelize')
 
 let UserModel = connection.define ( 'user', {
 
+
     firstname: {
         type: DataTypes.STRING(30),
         allowNull: false
@@ -16,7 +17,7 @@ let UserModel = connection.define ( 'user', {
         allowNull: false
     },
     password: {
-        type: DataTypes.STRING(30),
+        type: DataTypes.STRING(400),
         allowNull: false
     }
 })
