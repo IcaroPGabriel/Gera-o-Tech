@@ -14,8 +14,8 @@ const UsersList = async (req,res, next) => {
 }
 
 
-
-const UsersRegister = async (req,res,next) => {
+    const UsersRegister = async (req,res) => {
+        
         const firstname = req.body.firstname
         const surname = req.body.surname
         const email = req.body.email
@@ -27,25 +27,28 @@ const UsersRegister = async (req,res,next) => {
 
         const EmailValid = await UserModel.findOne({ 
             where: { email: email } });
-    
-    try {
-        const userCreate = await UserModel.create({
-            firstname:firstname,
-            surname:surname,
-            email:email,
-            password:hash
-        });
 
-        if (EmailValid == true) {
-            res.send({
-                sucess: true,
-                message: `Email já cadastrado!`
-        })
-        } else {
-        res.status(201).send({
-            sucess: true,
-            message: `Usuário criado com sucesso ${userCreate.firstname - userCreate.id}`
-        }
+        try {
+            const userCreate = await UserModel.create({
+                firstname:firstname,
+                surname:surname,
+                email:email,
+                password:hash
+            });
+
+            if (EmailValid == true) {
+                res.send({
+                    sucess: true,
+                    message:`Email já cadastrado!`
+                })
+            } else {
+                res.send({
+                    sucess:true,
+                    message:`Usuário criado com sucesso ${userCreate.firstname - userCreate.id}`
+                })
+            }
+            
+
         } catch (error) {
             res.status(400).send({
                 sucess:false,
@@ -53,6 +56,8 @@ const UsersRegister = async (req,res,next) => {
             })
         }
     }
+
+
 const UserUpdate = async (req,res, next) => {
     try {
         const id = req.params.id
