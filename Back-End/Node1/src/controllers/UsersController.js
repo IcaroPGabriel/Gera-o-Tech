@@ -25,8 +25,7 @@ const UsersList = async (req,res, next) => {
         const saltRound = 10
         const hash = await bcrypt.hash(password, saltRound)
 
-        const EmailValid = await UserModel.findOne({ 
-            where: { email: email } });
+        
 
         try {
             const userCreate = await UserModel.create({
@@ -36,17 +35,7 @@ const UsersList = async (req,res, next) => {
                 password:hash
             });
 
-            if (EmailValid == true) {
-                res.send({
-                    sucess: true,
-                    message:`Email já cadastrado!`
-                })
-            } else {
-                res.send({
-                    sucess:true,
-                    message:`Usuário criado com sucesso ${userCreate.firstname - userCreate.id}`
-                })
-            }
+            res.status(200).send(userCreate.firstname - userCreate.id)
             
 
         } catch (error) {
