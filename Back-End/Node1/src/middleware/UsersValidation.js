@@ -1,14 +1,14 @@
 const UserModel = require('../models/UserModel')
+const { DataTypes } = require('sequelize')
 
 
-const UserCreateValidate = (req,res,next) => {
+const UserCreateValidate = async (req,res,next) => {
     try {
         const{firstname, surname, email, password} = req.body
-        const EmailValid = UserModel.findOne({ 
-            where: { email: email } });
+        
+        const EmailValid = await UserModel.findOne({ 
+        where: { email: email } });
 
-
-            
         if(!firstname || !surname || !email || !password) {
             const message = 'As credenciais são obrigatórias!!!'
 
@@ -19,29 +19,29 @@ const UserCreateValidate = (req,res,next) => {
             
         }
 
-        if (EmailValid == true ) {
-            const alert = 'Email já existente!'
-          res.send(400).json({
-              sucess:false,
-              message:alert
-          })
-        } else{
-            res.send({
-                sucess:true,
-                message:`Usuário criado com sucesso`
+        if (EmailValid) {
+            return res.status(400).json({
+                
+                message:'Email já cadastrado!!'
             })
         }
+
+        if (password.length <= 4) {
+            return res.status(400).json({
+                sucess:false,
+                message: 'A senha deve ter mais de 4 dígitos!'
+            })
+        }
+
+            
  
            
     next()
 
-
-        
-        
     } catch (error) {
         return res.status(400).json({
             sucess: false,
-            message: `Erro: ${error}`
+            message: `Erro de requerimento! ${error}`
         })        
     }
 }
