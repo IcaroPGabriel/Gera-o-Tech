@@ -83,11 +83,19 @@ const UserDelete = async (req,res,next) => {
         const user = await UserModel.destroy( {
             where: { id }
         });
+
+        if (user == true) {
+            res.status(200).send({
+                'sucess': true,
+                'message': `Usuário deletado com sucesso! ID: ${user.id - user.name}`
+            }) 
+        } else {
+            res.status(404).send({
+                'sucess':`Usuário não encontrado!`
+            })
+        }
        
-        res.status(200).send({
-            'sucess': true,
-            'message': `Usuário deletado com sucesso! ID: ${user.id - user.name}`
-        })
+        
 
         
     } catch (error) {
