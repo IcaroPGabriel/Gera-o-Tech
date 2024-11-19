@@ -18,6 +18,9 @@ const users = require('./routes/RouterUsers');
 const { Model } = require('sequelize')
 app.use('/users', users);
 
+const category = require('./routes/RouterCategory');
+app.use('/Category', category);
+
 // SUBINDO O SERVIDOR NA PORTA 3000
 const PORT = 3000;
 app.listen(PORT, () => {
